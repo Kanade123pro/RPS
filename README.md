@@ -1,15 +1,23 @@
-Task 2
+TASK3
 
-num1=int(input("Enter the value1:-"))
-num2=int(input("Enter the value2:-"))
-opr=input("Enter the opr..(+,-,*,/)")
-if opr=="+":
-    print(num1+num2)
-if opr=="-":
-    print(num1-num2)
-if opr=="*":
-    print(num1*num2)
-if opr=="/":
-    print(num1/num2)
-if opr!="+" and opr!="-" and opr!="*" and opr!="/":
-    print("Invalid opr..")
+import string
+import random
+s1=string.ascii_lowercase
+# print(s1)
+s2=string.ascii_uppercase
+# print(s2)
+s3=string.digits
+# print(s3)
+s4=string.punctuation
+# print(s4)
+plen=int(input("Enter password length\n"))
+s=[]
+s.extend(list(s1))
+s.extend(list(s2))
+s.extend(list(s3))
+s.extend(list(s4))
+# print(s)
+random.shuffle(s)
+# print(s)
+print("Your Password is:")
+print("".join(s[0:plen]))
